@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+:root {
+    /* COLOR PALETTE */
+    --primary-green: #63bc8b;
+}
+
+body {
+    background: url("https://www.transparenttextures.com/patterns/tree-bark.png"),
+    MediumSeaGreen;
+    background-size: 20% auto;
+    overflow: hidden;
+    font-family: 'Short Stack', cursive;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.football {
+    width: 200px;
+    transform: rotate(45deg);
+}
+
+.logo:hover {
+    animation: tilting;
+    animation: tilting 4s linear infinite;
+}
+
+@keyframes tilting {
+    0% { transform: rotate(0deg); } 
+    25% { transform: rotate(25deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-25deg); }
+    100% { transform: rotate(0deg); }
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--primary-green);
+    text-shadow: 
+        1px 1px 2px black,
+        3px 3px 5px white;
+}
+
+.title .bowl {
+    margin-top: -10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: rgba(99,188,139, 0.5);
+    font-size: 14pt;
+}
+
+nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+nav .nav-link:hover {
+    color: #eb9f2f;
+    scale: 120%;
+    z-index: 10;
+}
+
+.error-message {
+    margin: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(112, 53, 36, 0.5);
+}
+
+.go-back-link {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(112, 53, 36, 0.5);
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error-message-go-back:hover {
+    scale: 110%;
+}
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.welcome-message {
+    z-index: 8;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: rgba(99,188,139, 0.5);
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgba(99,188,139, 0.5);
+    
+}
+
+.instructions:hover {
+    z-index: 8;
+    cursor: pointer;
+}
+
+.trash-can-container {
+    position: relative;
+    text-align: center;
+}
+
+.trash-can {
+    width: 300px;
+}
+
+.trash-can:hover {
+    z-index: 3;
+}
+
+.poop-count {
+    font-size: 24pt;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Permanent Marker', cursive;
+}
+
+.poop-count:hover {
+    z-index: 4;
+    cursor: help;
+}
+
+.winner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.winner-pic {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.winner-thanks {
+    background-color: rgba(99,188,139, 0.5);
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.forward {
+    z-index: 20;
+}
+
+.hurry {
+    color: #eb9f2f;
+}
+
+.pulsate {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    50% {font-size: 18px;}
+}
+
+/* GRASS (and homepage poop)*/
+/* (CSS and JSX for React use) adapted from Kit Jenson's 'Find the birds?' : https://codepen.io/kitjenson/pen/JjWPLyg */
+
+.grass {
+	width: 1vw;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: green;
+	background: linear-gradient(to bottom, forestgreen 75%, olive);
+	background-size: 200% auto;
+	box-shadow: 0 0 10px black;
+	border-radius: 100% 100% 0 0;
+	transform-origin: center bottom;
+	pointer-events: none;
+	animation: sway 5s linear infinite;
+}
+
+
+@keyframes sway {
+	25% {
+		transform: skewX(3deg);
+	}
+	75% {
+		transform: skewX(-3deg);
+	}
+}
+
+.poop {
+	position: absolute;
+	font-size: 36px;
+	line-height: 100%;
+	cursor: pointer;
+	user-select: none;
+}
+.poop:hover {
+	z-index: 2 !important;
+}
+
+
+/* TODO: fix hard coded dimensions so that all of the site can be viewed on smaller screen */
+/* CARDS */
+
+.cards-container {
+    z-index: 5;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0px 20px;
+    width: 440px;
+    height: 560px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.slider {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-nav {
+    z-index: 2;
+    font-size: 92px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(99,188,139, 0.5);
+
+}
+
+.slider-nav:hover {
+    scale: 120%;
+    color: #eb9f2f;
+}
+
+.card {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    margin: 20px;
+    width: 290px;
+    height: 520px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(99,188,139, 0.5);
+
+}
+
+.card:hover {
+    scale: 105%;
+}
+
+.card-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-contents .name {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.card-contents .breed {
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    width: 260px;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-contents .info-container {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.card-contents .info-container .info {
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-contents img {
+    border-radius: 5px;
+    width: 260px;
+}
+
+.waiting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+    position: relative;
+    margin: 20px;
+    width: 290px;
+    height: 520px;
+    border-radius: 5px;
+    background-color: rgba(112, 53, 36, 0.5);
+    cursor: wait;
+}
+
+.waiting-message {
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    font-size: 24pt;
+    max-width: 200px;
+    padding: 2px;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.spinner {
+    z-index: 10;
+    opacity: 1;
+    transition: opacity linear 0.1s;    
+}
+
+.spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px black;
+    border-bottom-color: #63bc8b;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 40px;
+    will-change: transform;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+
+/* ABOUT PAGE */
+
+.about-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-message {
+    z-index: 8;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgba(99,188,139, 0.5);
+    max-width: 300px;
+    text-align: center;
+}
+
+.secret-koda-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 50px;
+    border-radius: 5px;
+
+}
+
+.secret-message {
+    z-index: 4;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgba(99,188,139, 0.5);
+    max-width: 300px;
+    text-align: center;
+}
+
+
+
+.koda-card {
+    height: 360px;
+
+}
