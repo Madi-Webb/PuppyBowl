@@ -6,6 +6,7 @@ import Card from "./Card";
 const Puppies = () => {
 
     const { puppyList } = useOutletContext();
+    // const puppyList = [];
 
 
     const sliderLeft = () => {

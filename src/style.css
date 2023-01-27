@@ -151,7 +151,6 @@ nav .nav-link:hover {
     padding: 2px;
     border-radius: 2px;
     background-color: rgba(99,188,139, 0.5);
-    
 }
 
 .instructions:hover {
@@ -272,7 +271,6 @@ nav .nav-link:hover {
 }
 
 
-/* TODO: fix hard coded dimensions so that all of the site can be viewed on smaller screen */
 /* CARDS */
 
 .cards-container {
@@ -318,6 +316,7 @@ nav .nav-link:hover {
     z-index: 3;
     display: inline-block;
     margin: 20px;
+    padding-bottom: 10px;
     width: 290px;
     height: 520px;
     cursor: pointer;
@@ -460,7 +459,6 @@ nav .nav-link:hover {
     padding: 20px;
     margin: 50px;
     border-radius: 5px;
-
 }
 
 .secret-message {
@@ -472,9 +470,191 @@ nav .nav-link:hover {
     text-align: center;
 }
 
-
-
 .koda-card {
     height: 360px;
+}
 
+/* SCREEN SIZE CONDITIONAL SIZING */
+
+@media screen and (max-height:880px) {
+    .football {
+        width: 150px;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .cards-container {
+        /* width: 440px; */
+        height: 500px;
+        margin-top: 40px;
+    }
+    .slider-nav {
+        font-size: 78px;
+    }
+    .card {
+        /* width: 290px; */
+        height: 450px;
+    }
+    .card-contents img {
+        width: 220px;
+    }
+    .waiting-container {
+        height: 450px;
+    }
+    .koda-card {
+        height: 320px;
+    }
+    .secret-koda-container {
+        margin-top: 25px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-height:760px) {
+    .football {
+        width: 140px;
+    }
+    .title {
+        font-size: 1.4rem;
+    }
+    nav {
+        gap: 20px; 
+        padding: 5px 10px;
+        font-size: 12pt;
+    }
+    .cards-container {
+        /* width: 440px; */
+        height: 470px;
+        margin-top: 30px;
+    }
+    .card {
+        /* width: 290px; */
+        height: 425px;
+    }
+    .card-contents img {
+        width: 200px;
+    }
+    .waiting-container {
+        height: 425px;
+    }
+    .koda-card {
+        height: 320px;
+    }
+    .secret-koda-container {
+        height: 350px;
+    }
+    .trash-can {
+        width: 250px;
+    }
+}
+
+@media screen and (max-height:700px) {
+    .cards-container {
+        /* width: 440px; */
+        height: 420px;
+        margin-top: 20px;
+    }
+    .card {
+        /* width: 290px; */
+        height: 380px;
+    }
+    .card-contents img {
+        width: 175px;
+    }
+    .waiting-container {
+        height: 420px;
+    }
+    .koda-card {
+        height: 270px;
+    }
+    .welcome-message-container {
+        margin: 30px;
+    }
+}
+
+@media screen and (max-height:640px) {
+    .football {
+        width: 120px;
+    }
+    .cards-container {
+        height: 380px;
+        margin-top: 15px;
+    }
+    .card {
+        /* width: 290px; */
+        height: 330px;
+    }
+    .card-contents img {
+        width: 140px;
+    }
+    .waiting-container {
+        height: 380px;
+    }
+    .koda-card {
+        height: 235px;
+    }
+    .secret-koda-container {
+        height: 310px;
+    }
+    .welcome-message-container {
+        margin: 20px;
+    }
+    .trash-can {
+        width: 200px;
+    }
+}
+
+@media screen and (max-height:575px) {
+    .cards-container {
+        height: 340px;
+    }
+    .card {
+        /* width: 290px; */
+        height: 300px;
+    }
+    .card-contents img {
+        width: 120px;
+    }
+    .waiting-container {
+        height: 300px;
+    }
+    .koda-card {
+        height: 220px;
+    }
+    .secret-koda-container {
+        height: 295px;
+    }
+    .welcome-message-container {
+        margin: 10px;
+    }
+    .trash-can {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .cards-container {
+        width: 400px
+    }
+    .slider-nav {
+        font-size: 62px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .cards-container {
+        width: 380px
+    }
+    .slider-nav {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .cards-container {
+        width: 360px
+    }
+    .slider-nav {
+        font-size: 28px;
+    }
 }
